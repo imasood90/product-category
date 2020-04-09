@@ -40,8 +40,7 @@ logging:
     com.satish.monitoring: DEBUG
 
 fixer:
-#  api-key: 'put here your key'
-  api-key: '5c2f8a74aabb5672df5505dafad942e0'
+  api-key: 'put here your key'
   url: 'http://data.fixer.io'
 
 feign:
