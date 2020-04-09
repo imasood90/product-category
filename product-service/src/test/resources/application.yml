@@ -1,0 +1,25 @@
+spring:
+  profiles:
+    active: test
+endpoints:
+  shutdown:
+    enabled: true
+server:
+  port: 0
+mongeez:
+  location: mongo-changelog/changelog-master.xml
+
+---
+spring:
+  profiles: test
+  mongodb:
+    embedded:
+      version: 3.4.7
+  data:
+    mongodb:
+      port: 0
+      database: product-service
+eureka:
+  client:
+    register-with-eureka: false
+    fetch-registry: false

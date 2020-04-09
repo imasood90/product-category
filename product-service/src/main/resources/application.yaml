@@ -1,0 +1,51 @@
+info:
+  version: ${project.version}
+
+server:
+  port: ${PRODUCTSERVICE_PORT:8082}
+application:
+  name: ^project.artifactId^
+  description: ^project.name^
+  version: ^project.version^
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${DISCOVERY_URL:http://${DISCOVERY_HOST:localhost}:${DISCOVERY_PORT:8761}/eureka/}
+
+spring:
+  application:
+    name: product-service
+  profiles:
+    active: dev
+  data:
+    mongodb:
+      host: ${DATABASE_HOST:localhost}
+      database: product-service
+      auto-index-creation: true
+      username: user
+      password: password
+
+
+management:
+  endpoint:
+    shutdown:
+      enabled: true
+
+
+logging:
+  level:
+    org.springframework.data.mongodb.core.ReactiveMongoTemplate: DEBUG
+    org.springframework.web: DEBUG
+    com.satish.monitoring: DEBUG
+
+fixer:
+#  api-key: 'put here your key'
+  api-key: '5c2f8a74aabb5672df5505dafad942e0'
+  url: 'http://data.fixer.io'
+
+feign:
+  hystrix:
+    enabled=true
+
+

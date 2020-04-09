@@ -1,0 +1,32 @@
+{
+    "products": {
+        "indexes": [
+            {
+                "index": {
+                    "sku": 1,
+                },
+                "options": {
+                    "unique": true
+                }
+            }
+        ],
+        "data": [
+            {
+                "_id": "ff39c600-76d9-11ea-bc55-0242ac130003",
+                "_class": "com.hse24.task.model.Product",
+                "name": "Test Product",
+                "description": "some description for test product",
+                "image":"http://testimage.png",
+                "categoryId": "3a3f3d70-76da-11ea-bc55-0242ac130003",
+                "sku":"5b476600-76da-11ea-bc55-0242ac130003",
+                "browsingName": "Product1",
+                "price": 120.0,
+                "listPrice":11.0,
+                "quantity":1,
+                "isStockControlled":true,
+                "status": "ACTIVE",
+                "rank": 1
+            }
+        ]
+    }
+}

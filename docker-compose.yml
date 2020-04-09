@@ -1,0 +1,55 @@
+version: '3.7'
+
+services:
+  mongodb:
+    image: mongo:latest
+    container_name: mongodb
+    restart: always
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: admin-user
+      MONGO_INITDB_ROOT_PASSWORD: admin-password
+      MONGO_INITDB_DATABASE: admin
+    ports:
+      - 27017:27017
+    volumes:
+      - ./init-mongo.js:/docker-entrypoint-initdb.d/init-mongo.js
+
+  service-registry:
+    container_name: service-registry
+    build: ./eureka
+    ports:
+      - "8761:8761"
+
+  gateway:
+    container_name: gateway
+    build: ./gateway
+    env_file:
+      - common.env
+    ports:
+      - "8080:8080"
+    depends_on:
+      - service-registry
+
+  category-service:
+    container_name: category-service
+    build: ./category-service
+    env_file:
+      - common.env
+    ports:
+      - "8081:8081"
+    depends_on:
+      - mongodb
+      - service-registry
+
+  product-service:
+    container_name: product-service
+    build: ./product-service
+    env_file:
+      - common.env
+    ports:
+      - "8082:8082"
+    depends_on:
+      - mongodb
+      - service-registry
+
+
