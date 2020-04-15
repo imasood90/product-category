@@ -1,4 +1,4 @@
-package com.hse24.task.config;
+package com.example.task.config;
 
 import com.consol.citrus.http.client.HttpClient;
 import com.consol.citrus.http.client.HttpClientBuilder;

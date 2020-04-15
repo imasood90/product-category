@@ -248,7 +248,7 @@
                 <version>2.7.2</version>
                 <configuration>
                     <author>Iqbal Masood</author>
-                    <targetPackage>com.hse24.task</targetPackage>
+                    <targetPackage>com.example.task</targetPackage>
                 </configuration>
             </plugin>
             <plugin>

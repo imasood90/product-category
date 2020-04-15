@@ -1,4 +1,4 @@
-package com.hse24.task.config.base;
+package com.example.task.config.base;
 
 import com.consol.citrus.dsl.junit.JUnit4CitrusTestRunner;
 import com.consol.citrus.http.client.HttpClient;

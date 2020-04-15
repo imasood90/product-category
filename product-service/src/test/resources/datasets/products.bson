@@ -13,7 +13,7 @@
         "data": [
             {
                 "_id": "ff39c600-76d9-11ea-bc55-0242ac130003",
-                "_class": "com.hse24.task.model.Product",
+                "_class": "com.example.task.model.Product",
                 "name": "Test Product",
                 "description": "some description for test product",
                 "image":"http://testimage.png",

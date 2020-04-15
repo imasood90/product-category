@@ -1,4 +1,4 @@
-package com.hse24.task.config;
+package com.example.task.config;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;

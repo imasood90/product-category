@@ -31,10 +31,10 @@ public class SwaggerConfig {
     @Bean
     public ApiInfo apiInfo() {
         return new ApiInfo(
-                "HSE24 REST API",
-                "Spring Boot REST API for HSE24  Task",
+                "Example REST API",
+                "Spring Boot REST API for EXAMPLE  Task",
                 "1.0",
-                "put here your hse24 terms of service ...",
+                "put here your example terms of service ...",
                 new Contact("Iqbal Masood", "", "iqbal_masood944@hotmail.com"),
                 "Apache License Version 2.0",
                 "https://www.apache.org/licenses/LICENSE-2.0",

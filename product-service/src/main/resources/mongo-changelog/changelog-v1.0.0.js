@@ -1,7 +1,7 @@
 // mongeez formatted javascript
 // %%Ignore-License
 
-// changeset ims:Hse24-1
+// changeset ims:Task-1
 db.products.createIndex({
     "sku" : 1
 }, {

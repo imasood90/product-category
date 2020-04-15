@@ -1,11 +1,11 @@
-package com.hse24.task;
+package com.example.task;
 
 import com.consol.citrus.annotations.CitrusResource;
 import com.consol.citrus.annotations.CitrusTest;
 import com.consol.citrus.context.TestContext;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.hse24.task.config.base.AbstractIT;
-import com.hse24.task.model.ProductDTO;
+import com.example.task.config.base.AbstractIT;
+import com.example.task.model.ProductDTO;
 import org.junit.Test;
 import org.springframework.http.HttpStatus;
 
