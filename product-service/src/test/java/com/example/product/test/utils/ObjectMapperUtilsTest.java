@@ -1,4 +1,4 @@
-package com.example.category.test.utils;
+package com.example.product.test.utils;
 
 import com.example.product.utils.ObjectMapperUtils;
 import org.junit.Assert;

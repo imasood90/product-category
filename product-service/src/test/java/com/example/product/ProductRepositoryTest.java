@@ -1,9 +1,9 @@
-package com.example.category;
+package com.example.product;
 
 import com.example.product.model.Product;
 import com.example.product.model.Status;
 import com.example.product.repository.ProductRepository;
-import com.example.category.test.config.AbstractIntegrationTest;
+import com.example.product.test.config.AbstractIntegrationTest;
 import com.lordofthejars.nosqlunit.annotation.CustomComparisonStrategy;
 import com.lordofthejars.nosqlunit.annotation.UsingDataSet;
 import com.lordofthejars.nosqlunit.mongodb.MongoFlexibleComparisonStrategy;

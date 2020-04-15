@@ -1,4 +1,4 @@
-package com.example.category.test.config;
+package com.example.product.test.config;
 
 import org.junit.Before;
 import org.junit.runner.RunWith;

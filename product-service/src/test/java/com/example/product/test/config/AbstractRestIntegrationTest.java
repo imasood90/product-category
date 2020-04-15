@@ -1,4 +1,4 @@
-package com.example.category.test.config;
+package com.example.product.test.config;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.reactive.AutoConfigureWebTestClient;

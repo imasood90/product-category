@@ -1,6 +1,6 @@
-package com.example.category;
+package com.example.product;
 
-import com.example.category.test.config.AbstractRestIntegrationTest;
+import com.example.product.test.config.AbstractRestIntegrationTest;
 import org.junit.Test;
 
 public class ProductServiceApplicationTests extends AbstractRestIntegrationTest {

@@ -1,6 +1,6 @@
-package com.example.category.test.model;
+package com.example.product.test.model;
 
-import com.example.product.model.Product;
+import com.example.product.model.Fixer;
 import com.openpojo.reflection.impl.PojoClassFactory;
 import com.openpojo.validation.Validator;
 import com.openpojo.validation.ValidatorBuilder;
@@ -11,19 +11,22 @@ import com.openpojo.validation.rule.impl.SerializableMustHaveSerialVersionUIDRul
 import com.openpojo.validation.rule.impl.SetterMustExistRule;
 import com.openpojo.validation.test.impl.GetterTester;
 import com.openpojo.validation.test.impl.SetterTester;
+import nl.jqno.equalsverifier.EqualsVerifier;
+import nl.jqno.equalsverifier.Warning;
+import org.apache.commons.collections.MapUtils;
 import org.apache.commons.lang3.ObjectUtils;
 import org.junit.Test;
 
-import java.util.UUID;
+import java.util.Date;
+import java.util.HashMap;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.not;
 
-
-public class ProductPojoTest {
+public class FixerPojoTest {
 
     @Test
-    public void validateProductPojo() {
+    public void validateFixerPojo() {
         final Validator validator;
         validator = ValidatorBuilder.create()
                 .with(new GetterMustExistRule())
@@ -34,23 +37,20 @@ public class ProductPojoTest {
                 .with(new SerializableMustHaveSerialVersionUIDRule())
                 .with(new GetterTester())
                 .build();
-        validator.validate(PojoClassFactory.getPojoClass(Product.class));
+        validator.validate(PojoClassFactory.getPojoClass(Fixer.class));
     }
 
+    @Test
+    public void shouldFollowEqualsContract() {
+        EqualsVerifier.forClass(Fixer.class)
+                .suppress(Warning.ALL_FIELDS_SHOULD_BE_USED)
+                .verify();
+    }
 
     @Test
     public void hasToString() {
-        final Product product = new Product();
-        product.setName("Mobile");
-        product.setBrowsingName("Mobile");
-        product.setCategoryId(UUID.randomUUID().toString());
-        product.setDescription("This is for Mobile Product");
-        product.setIsStockControlled(true);
-        product.setSku("UGG-BB-PUR-06");
-        product.setListPrice(120.0);
-        product.setPrice(110.0);
-        product.setImage("test.jpg");
-        product.setQuantity(1);
-        assertThat(ObjectUtils.identityToString(product), not(product.toString()));
+        Fixer fixer = new Fixer(true, 123123L, "EUR", new Date(), MapUtils.putAll(new HashMap<>(), new Object[][]{
+                {"USD", 120.00}}));
+        assertThat(ObjectUtils.identityToString(fixer), not(fixer.toString()));
     }
 }

@@ -1,8 +1,7 @@
-package com.example.category;
+package com.example.product;
 
-import com.example.product.ProductController;
 import com.example.product.model.ProductDTO;
-import com.example.category.test.config.AbstractRestIntegrationTest;
+import com.example.product.test.config.AbstractRestIntegrationTest;
 import com.example.product.service.ProductService;
 import org.junit.Before;
 import org.junit.Test;

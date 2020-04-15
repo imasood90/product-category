@@ -1,4 +1,4 @@
-package com.example.category.test.config;
+package com.example.product.test.config;
 
 import com.lordofthejars.nosqlunit.mongodb.MongoDbRule;
 import org.junit.Rule;
