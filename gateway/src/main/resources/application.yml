@@ -17,7 +17,7 @@ spring:
       discovery:
         locator:
           enabled: true
-      routes: # these are samples
+      routes:
         - id: category-service
           uri: lb://category-service
           predicates:
